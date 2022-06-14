@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -59,14 +63,14 @@
         content: "SCORE";
         color: #a61a9d;
       }
-       #lap {
+       /* <! ––  #lap {
         left: 88%;
         width: 45%;
       }
       #lap::before {
         content: "LAP";
         color: #0082df;
-      }
+      }  */
       
 
       #tacho {
@@ -222,12 +226,13 @@
       <div id="road">
         <div id="cloud"></div>
         <div id="cube"></div>
+        
       </div>
 
       <div id="hud">
         <span id="time" class="topUI">0</span>
         <span id="score" class="topUI">0</span>
-        <span id="lap" class="topUI">0'00"000</span>
+      <!--  <span id="lap" class="topUI">0'00"000</span> -->
        
         <span id="tacho">0</span>
       </div>
@@ -726,7 +731,7 @@
           road.style.opacity = 0.4;
           text.innerText = "PLAY";
 
-          highscores.push(lap.innerText);
+         /* highscores.push(lap.innerText); */
           highscores.sort();
           updateHighscore();
 
@@ -737,9 +742,9 @@
           tacho.innerText = speed | 0;
 
           let cT = new Date(timestamp() - start);
-          lap.innerText = `${cT.getMinutes()}'${cT.getSeconds().pad(2)}"${cT
+         /* lap.innerText = `${cT.getMinutes()}'${cT.getSeconds().pad(2)}"${cT
             .getMilliseconds()
-            .pad(3)}`;
+            .pad(3)}`; */
         }
 
         // sound
